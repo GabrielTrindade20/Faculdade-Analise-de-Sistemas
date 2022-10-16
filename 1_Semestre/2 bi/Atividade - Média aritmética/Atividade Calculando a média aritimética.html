@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entender</title>
+
+    <style>
+
+        body{
+            background-color: rgb(101, 255, 139);
+        }
+
+        button{
+            border-radius: 10px;
+            background-color: black;
+            color: azure;
+            width: 90px;
+            height: 30px;
+            font-size: medium;
+
+        }
+
+        th{
+            font-size: x-large;
+            
+        }
+
+        td{
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div>
+        <table border="1" align="center" >
+           <th colspan="2">Calculando a média Aritimética</th>
+
+           <tr>
+               <td>Informe a primeira nota:</td>
+               <td><span id="nota1"></span></td>
+           </tr>
+
+           <tr>
+               <td>Informe a segunda nota</td>
+               <td><span id="nota2"></span></td>
+           </tr>
+
+           <th colspan="2"><button onclick="media()">Calcular</button></th>
+        </table>
+    </div><br>
+
+    <div>
+        <table border="2" align="center">
+            <th>Situação do aluno</th>
+            <th>Média</th>          
+            <tr>
+                <td><span id="situacao"></span></td>
+                <td><span id="nota"></span></td>
+            </tr>
+        </table>
+        
+
+        
+    </div>
+
+    <!--Adicionando o Script-->
+    <script>
+        //"Funtion" mostra que eu estou iniciando uma função
+        //"let" ou "var" declara as variáveis
+        //"Prompt" Faz aparecer a caixa de texto para o usuário digitar
+        //"console" apenas mostra no navegador os números armazenados        
+        //"Document" refere-se ao local do HTML 
+        //"getElementById" refere-se ao id que eu quero pegar
+        //"innerHTML" quer dizer que ele vai armazenar lá no span a nota digitada
+        function media(){
+            let nota1 = parseFloat(prompt("Informe a 1º nota"));
+            console.log(nota1);
+            document.getElementById('nota1').innerHTML = nota1;
+
+            let nota2 = parseFloat(prompt("Informe a 2º nota"));
+            console.log(nota2);
+            document.getElementById('nota2').innerHTML = nota2;
+
+            let media = (nota1 + nota2)/2;
+            console.log(media);
+            document.getElementById('nota').innerHTML = media.toFixed(2)
+        
+
+        //Processamento (Calculo que se pede na questão)
+            //Atribuindo as condições
+            //Se a média >= 6 ele vai escrever Aprovado(no id situação) e pintar de azul
+            //Se não, ele vai escrever Reprovado(no id situação) e pintar de Vermelhor
+            if (media >= 6) {
+            document.getElementById('situacao').innerHTML = 'Aprovado';
+            document.getElementById('nota').style.backgroundColor = 'blue'; 
+            document.getElementById('nota').style.color = 'white';     
+            } else {
+            document.getElementById('situacao').innerHTML = 'Reprovado';
+            document.getElementById('nota').style.backgroundColor = 'red';
+            document.getElementById('nota').style.color = 'white';  
+            }
+        }
+       
+    </script>
+
+
+</body>
+</html>

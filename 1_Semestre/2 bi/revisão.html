@@ -1,0 +1,159 @@
+Questão 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .capitulo{
+            color: blue;
+        }
+
+        h1{
+            color: red;
+        }
+
+        p{
+            background-color: yellow;
+        }
+
+        #segundo{
+            color: green;
+        }
+
+        #C{
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Título</h1>
+    
+    <h2 class="capitulo">Capítulo</h2>
+    <p>Primeiro parágrafo</p>
+    <p id="segundo">Segundo parágrafo</p>
+    <p>Terceiro parágrafo</p>
+</body>
+</html>
+
+questão 2
+
+    f
+    v
+    v
+    v
+    f
+    <br><br>
+Questão 3 <br><br>
+
+    1) Qual a finalidade dos atributos method e action da tag form<br>
+        Method especifica como enviar os dados e o action identifica a página que os dados serão enviados
+<br><br>
+    2) Quais são os valores possíveis para o atributo method<br>
+        get ou post 
+<br><br>
+    3) Qual é a tag que deve ser usada para criar uma caixa de texto de uma
+    linha?<br>
+        a tag input com o type="text"
+<br><br>
+    4) Como fazer para que em um grupo de quatro botões de rádio, apenas um deles fique ativo de cada vez? 
+    Qual é o valor de type usado para criar um botão de rádio?<br>
+        Para que botões fiquem ativos um por vez, o "name" tem que ser o mesmo e pode possuir
+        valores diferentes
+<br><br>
+    5) Como conectar a tag label com um elemento de um formulário?<br>
+        Crie o formulário dentro da label
+<br><br>
+    6) Para que servem os elementos fieldset e legend?<br>
+       Os 2 servem para agrupar e organizar elementos, o fieldset é usado para agrupar conjuntos de campo e
+       a legend é usado para dar uma descrição de um conteúdo.
+<br><br>    
+    7) Para que serve o elemento input quando o type é igual a submit?<br>
+        Serve para enviar os dados que foram digitados pelo usuário
+<br><br>
+    8) Para que serve o elemento input quando o type é igual a reset?<br>
+        Serve para restaurar todos os elementos de entrada do formulário, aos seus valores iniciais 
+<br><br>
+    9) Como criar uma caixa de texto que tenha mais de uma linha?<br>
+        usando a tag textarea
+<br><br>
+    10) Escreva um exemplo de código HTML, usando os elementos select e
+    option.<br>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select name="select">
+            <option value="valor1">Valor 1</option>
+            <option value="valor2" selected>Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </select>
+
+
+    </body>
+    </html>
+    <br><br>
+
+    Questão 4 <br>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Conversor temperatura</h1>
+        <h2>Fahrenheit - Celsius</h2>
+        <label for="fahrenheit">Fahrenheit</label>
+        <input type="text" id="fahrenheit" name="fahrenheit">
+       
+        <p>Fórmula: ºC = (F – 32) / 1.8 </p>
+        <p id="C">Celsius:<span id="c"></span></p>
+        <br>
+
+        <button onclick="calcula()">Converter Fahrenheit -> Celsius</button>
+
+        <script>
+            function calcula(){
+
+                let f = parseFloat(document.getElementById("fahrenheit").value);
+                let c = (f - 32)/1.8;
+                c = c.toFixed(1);
+                document.getElementById("c").innerHTML = c;
+                
+                if (c < 36) {
+                    document.getElementById("c").innerHTML = "HIPOTERMIA";
+                    document.getElementById("c").style.color = "blue";
+                } else if ((c >= 36) && (c <= 37.5)) {
+                    document.getElementById("c").innerHTML = "NORMAL";
+                    document.getElementById("c").style.color = "green";
+                } else if ((c > 37.5) && (c <= 39.5)) {
+                    document.getElementById("c").innerHTML = "FEBRE";
+                    document.getElementById("c").style.color = "fff200"; //amarelo
+                } else if ((c > 39.5) && (c <= 41)) {
+                    document.getElementById("c").innerHTML = "FEBRE ALTA";
+                    document.getElementById("c").style.color = "ff5500"; //laranja
+                } else if (c > 41) {
+                    document.getElementById("c").innerHTML = "HIPERTERMIA";
+                    document.getElementById("c").style.color = "red"; 
+                }
+            
+            }
+        </script>
+
+       </body>
+    </html>

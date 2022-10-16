@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastro para Currículo</legend>
+       
+        <form><!--method="Post"-->
+    
+          <p><h3>Dados pessoais:</h3></p>
+            <label for="name">Primeiro nome:</label><br>
+            <input type="text" name="1nome" id="1nome" placeholder="Ex. João"><br>
+    
+            <label for="name">Sobrenome</label><br>
+            <input type="text" name="2nome" id="2nome" placeholder="Ex. Dias"><br><br>
+    
+    
+            <label for="e-mail">Informe seu endereço de e-mail:</label><br>
+            <input type="e-mail" name="email" id="email" required><br><br>
+    
+            <label for="data">Informe a sua data de nascimento</label><br>
+            <input type="date" name="data" id="date"><br><br>
+    
+    
+            <label for="name">Crie uma senha:</label><br>
+            <input type="password" name="senha" id="senha" required><br><br>
+    
+            <label for="name">UF:</label><br>
+            <select name="uf" id="uf">
+              <option value="">Selecione</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AM">AM</option>
+              <option value="AP">AP</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MG">MG</option>
+              <option value="MS">MS</option>
+              <option value="MT">MT</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="PR">PR</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SE">SE</option>
+              <option value="SP">SP</option>
+              <option value="TO">TO</option>
+             </select>
+    
+    
+    
+            <h3>Experiência profissional:</h3>
+            <h4>Informe com o que você já trabalhou:</h4>
+    
+            <label for="Experiências">HTML:</label>
+            <input type="checkbox" name="Experiências" id="Experiências">
+            <label for="Experiências">CSS:</label>
+            <input type="checkbox" name="Experiências" id="Experiências">
+            <label for="Experiências">JavaScript:</label>
+            <input type="checkbox" name="Experiências" id="Experiências">
+            <label for="Experiências">Python:</label>
+            <input type="checkbox" name="Experiências" id="Experiências">
+            <label for="Experiências">Java:</label>
+            <input type="checkbox" name="Experiências" id="Experiências">
+            <label for="Experiências">PHP:</label>
+            <input type="checkbox" name="Experiências" id="Experiências"><br>
+    
+    
+            <H4><label for="radio">Escolha a matéria que mais gostou na faculdade:</label></H4>
+    
+            <input type="radio" id="botão" name="unica">
+            <label for="mat">Matemática Computacional</label><br>
+            <input type="radio" id="botão" name="unica">
+            <label for="pw">Padrões WEB</label><br>
+            <input type="radio" id="lab" name="unica">
+            <label for="lab">Laboratório de Inovação</label><br>
+            <input type="radio" name="unica" id="botão">
+            <label for="logic">Lógica de Programação</label><br>
+            <input type="radio" name="unica" id="botão">
+            <label for="intro">Introdução a Computação</label><br><br>
+    
+            
+             <input type="submit" value="Enviar">
+             <a href="index.html">Página inicial</a>
+    
+        </form>
+    
+      </fieldset>     
+</body>
+</html>

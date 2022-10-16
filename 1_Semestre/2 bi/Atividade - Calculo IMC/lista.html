@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elementos</h1>
+<h2>Usando o appendChild()</h2>
+
+<ul id="mylist">
+  <li>Café</li>
+  <li>Chá</li>
+</ul>
+
+<p>Clique em "adcionar" para adcionar um item à lista"</p>
+
+<input type="radio" name="cores" value="red" checked>vermelho
+<input type="radio" name="cores" value="green">verde
+<input type="radio" name="cores" value="blue">azul
+<br>
+
+<input type="text" name="item" id="item"/>
+<button onclick="myFunction()">adcionar</button>
+
+
+
+<script>
+function myFunction() {
+
+//Criei um elemento de lista
+const lista = document.createElement("li");
+
+//Atribui à "item" um valor que eu digitei no id "item"
+const item = document.getElementById("item").value;
+
+//atibuir a "cor" o valor que eu digitei no name "cores"
+cor = document.querySelector('input[name="cores"]:checked').value;
+            
+//adcionar ao espaço em branco da minha lista, o atributo que eu coloquei na variável "item"
+lista.innerHTML = item;
+
+//atribuir cor ao meu item da lista
+lista.style.color = cor;
+
+//adcionar ao id "mylist" dentro da ul o item que atribui a lista
+document.getElementById("mylist").appendChild(lista);
+
+//retorna o valor "vazio" à lista
+document.getElementById("item").value = "";
+
+
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando formulario</title>
+</head>
+<body>
+  
+    <h1>Atividade html</h1>
+    <h2>Grupo: Gabriel Trindade</h2>
+
+  <fieldset>
+
+    <div>
+      <b>1) Na tag "input" com atributo type="text", para que serve o atributo "placeholder"?</b> <br>
+          Resposta: fornecer ao usuário uma dica que descreve o valor esperado em um dado campo de entrada. <br>
+      <input type="text" placeholder="Exemplo"> <br>
+    </div><br>
+
+    <div>
+     <b>2) Na tag "input" com atributo type="radio" ou type="radio", para que serve o atributo "checked"?</b> <br>
+      Resposta: é usado para especifica que este botão na "checkbox" ou "radio" é selecionado por padão.<br>
+      <input type="radio" name="opção" value="op1">Opção 1<br>
+      <input type="radio" name="opção" value="op2" checked>Opção 2<br>
+      <input type="radio" name="opção" value="op3">Opção 3<br>
+    </div><br>
+
+    <div>
+      <b>3) Na tag "input" para que serve o atributo "value"?</b><br>
+      Resposta: é um atributo obrigatório que especifica o valor do <i>input</i> quando este botão é selecionado <br>
+      <input type="radio" name="opcao1" value="opcao" checked>Opção 1
+      <input type="radio" name="opcao2" value="opcao" checked>Opção 2<br>
+    </div><br>
+    
+    <div>
+      <b>4) Que atributo deve ser utilizado para agrupar vários botões de rádio em um formulário de modo que apenas um deles fique marcado de cada vez?</b><br>
+      Resposta: O atributo <i>input</i> com o <i>type</i> "radio", quando o <i>input</i> possuír o mesmo "name", somente uma opção poderá ser selecionada.<br> 
+
+      <input type="radio" name="opcao" value="opcao1" checked>opção 1<br>
+      <input type="radio" name="opcao" value="opcao2">opção 2<br>
+      <input type="radio" name="opcao" value="opcao3">opção 3<br>
+      <input type="radio" name="opcao" value="opcao4">opção 4<br>
+      <input type="radio" name="opcao" value="opcao5">opção 5<br>
+    </div><br>
+
+    <div>
+      <b>5) Para que serve a tag "label"? Para que serve o atributo "for" nessa tag?</b><br>
+      Resposta: A tag "label" representa uma legenda para um item em uma interface de usuário.
+      O atributo "for" faz um tipo de link entre a label e o input. Logo o "for" tem que apontar para o ID do input.<br>
+
+      <label for="name">Qual seu nome?</label>
+      <input type="text" name="name" value="Gabriel Rocha">
+    </div><br>
+
+    <div>
+      <b>6) Na tag "option" para que serve o atributo "selected"?</b><br>
+      Resposta: O SELECT tem, não só um identificador de abertura, mas também um identificador de encerramento. 
+      Dentro do SELECT podemos ter apenas uma sequência de identificadores OPTION. <br>
+
+      <select name="opcao">
+        <option>opção 1</option>
+        <option>opção 2</option>
+        <option>opção 3</option>
+      </select>
+    </div><br>
+    
+    <div>
+      <b>7) Nas tags de formulário para que serve o atributo "required"?</b><br>
+      Resposta: É usado para indicar que um determinando campo de formulário é obrigatório para o envio do mesmo.
+
+      <label for="email">Escreva seu email</label>
+      <input type="e-mail" name="email" required>
+    </div><br>
+    
+    <div>
+      <b>8) Na tag form para que serve o atributo "action"?</b><br>
+      Resposta: O atributo "action" define o local (através de uma URL) ao qual serão enviados todos os dados recolhidos do formulário. <br>
+
+      "<input type="submit">"
+    </div><br>
+
+    <div>
+      <b>9) Na tag form para que serve o atributo "method"?</b><br>
+      Resposta: O atributo "method" define qual o método HTTP para enviar os dados. Ele pode ser "GET" ou "POST"<br>
+    </div><br>
+
+    <div>
+      <b>10) Para que o valor digitado de uma senha não apareça na barra de endereços do navegador, qual deve ser o valor do atributo "method" na tag "form"?</b>
+      Resposta: Deve-se colocar o atributo post, pois o método "post" é mais robusto e seguro do que "get", e "post" não possui limitações de tamanho
+
+    </div>
+    
+    <div>
+      <b>Qual valor deve ser informado no atributo "method" na tag "form" em um formulário que será usado para fazer upload de arquivos?</b>
+      Resposta: Deve-se colocar o atributo get, este método anexa os dados do formulário à URL em pares nome/valor.
+    </div><br>
+    
+    
+    <a href="formulário.html">Formulário</a><br><br>
+  
+  </fieldset>
+</body>
+
+</html>

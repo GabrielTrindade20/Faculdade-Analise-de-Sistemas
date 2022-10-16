@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="E:\Web Design Express\.Curso\aula 3/css.css">
+
+    <style>
+        body{
+            background-color: rgba(236, 155, 211, 0.503);
+        }
+
+        #titulo{
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+
+        #tabela1 {
+            margin-top: 5%;
+            margin-left: 38%;
+        }
+
+        #tabela2 {
+            margin-top: 5%;
+            margin-left: 39%;
+            
+        }
+
+        #botão {
+        
+        margin-top: 0%;
+        margin-left: 44%;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        font-family: "Arial Black", sans-serif;
+        background-color: #887CFF;
+        border: solid #0F0056 4px;
+        border-radius: 15px;
+        padding: 2px;
+        text-shadow: 2px 1px 1px #000000;
+        -webkit-transition: all 0.41s ease;
+        -moz-transition: all 0.41s ease;
+        -o-transition: all 0.41s ease;
+        transition: all 0.41s ease;
+    }
+    #botão:hover{
+        font-weight: normal;
+        background-color: #E357FF;
+        border: 5px solid #7CAFFF;
+        letter-spacing: 2,5px;
+        border-radius: 15px;
+        text-shadow: 0px 1px 2px #000000;
+        box-shadow: 0px 1px 2px #000000;
+        }
+
+        #lista {
+            margin-top: 5%;
+            margin-left: 34%;
+        }
+
+        #inputs {
+            margin-top: 0%;
+            margin-left: 0%;
+        }
+
+        #myList {
+            margin-top: -1%;
+            margin-left: -6%;
+        }
+
+        #adcionar{
+        margin-top: 0%;
+        margin-left: 0%;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: #FFFFFF;
+        font-family: "Arial Black", sans-serif;
+        background-color: #887CFF;
+        border: solid #0F0056 3px;
+        border-radius: 15px;
+        padding: 2px;
+        text-shadow: 2px 1px 1px #000000;
+        -webkit-transition: all 0.41s ease;
+        -moz-transition: all 0.41s ease;
+        -o-transition: all 0.41s ease;
+        transition: all 0.41s ease;
+    }
+    #adcionar:hover{
+        font-weight: normal;
+        background-color: #E357FF;
+        border: 5px solid #7CAFFF;
+        letter-spacing: 2,5px;
+        border-radius: 15px;
+        text-shadow: 0px 1px 2px #000000;
+        box-shadow: 0px 1px 2px #000000;
+        }
+
+        #item {
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div id="titulo">
+     <h1>Calculando o Índice de Massa Corpórea</h1>
+    </div>
+
+    <div>
+        <button onclick="imc()" id="botão">Iniciar</button>
+    </div>
+
+    <div id="tabela1">
+        <table border="2">
+            
+            <th colspan="2">Vamos Calcular o seu IMC</th>
+            
+            <tr align="center">
+                <td id="p">Peso Inserido</td>
+                <td><span id="valp"></span></td>
+            </tr>
+
+            <tr align="center">
+                <td id="h">Altura inserida</td>
+                <td><span id="valh"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="tabela2">
+        <table border="3">
+            <th>Resultado do seu IMC:</th>
+            
+            <tr clospan="2" align="center"> <!--Valor do IMC-->
+            <td id="resul"> <!--Aqui é o InnerHTML--> </td>
+            </tr>
+
+            <tr align="center"> <!--Informação sobre o peso-->
+                <td><span id="msg"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function imc() {
+            let peso = parseFloat(prompt('Informe seu PESO'));
+            console.log(peso);
+            document.getElementById('valp').innerHTML = (peso);
+          
+            let altura = parseFloat(prompt('Informe sua ALTURA'));
+            console.log(altura);
+            document.getElementById('valh').innerHTML = (altura);
+
+            let imc = (peso) /altura**2;
+            console.log(imc);
+            document.getElementById('resul').innerHTML = imc.toFixed(2);
+            
+
+            if (peso < 0) {
+                alert('VOCÊ INSERIU UM VALOR NEGATIVO')
+                document.getElementById('valp').innerHTML = ('PESO NEGATIVO')
+                document.getElementById('resul').innerHTML = ('RESULTADO INCORRETO')
+                document.getElementById('msg').innerHTML = ('')
+
+            } else if (altura < 0) {
+                alert('VOCÊ INSERIU UM VALOR NEGATIVO')
+                document.getElementById('valh').innerHTML = ('ALTURA NEGATIVA')
+                document.getElementById('resul').innerHTML = ('RESULTADO INCORRETO')
+                document.getElementById('msg').innerHTML = ('')
+            
+            } else if (altura = 0) {
+                alert('VOCÊ INSERIU A ALTURA 0')
+                document.getElementById('valh').innerHTML = ('ALTURA "0" Inserida')
+                document.getElementById('resul').innerHTML = ('RESULTADO INCORRETO')
+                document.getElementById('msg').innerHTML = ('')
+
+            } else if (imc < 20) {
+                document.getElementById('msg').innerHTML = ('ABAIXO DO PESO');
+                document.getElementById('msg').style.backgroundColor = 'lightblue';
+                document.getElementById('resul').style.backgroundColor = 'lightblue';
+
+            } else if ((imc >= 20) && (imc <= 25)) {
+                document.getElementById('msg').innerHTML = ('NORMAL');
+                document.getElementById('msg').style.backgroundColor = 'lightgreen';
+                document.getElementById('resul').style.backgroundColor = 'lightgreen';
+
+            } else if ((imc > 25) && (imc < 30)) {
+                document.getElementById('msg').innerHTML = ('SOBREPESO');
+                document.getElementById('msg').style.backgroundColor = 'yellow';
+                document.getElementById('resul').style.backgroundColor = 'yellow';
+
+            } else if ((imc >= 30) && (imc < 35)) {
+                document.getElementById('msg').innerHTML = ('OBESIDADE 1');
+                document.getElementById('msg').style.backgroundColor = 'orange';
+                document.getElementById('resul').style.backgroundColor = 'orange';
+
+            } else if ((imc >= 35) && (imc < 40)) {
+                document.getElementById('msg').innerHTML = ('OBESIDADE 2');
+                document.getElementById('msg').style.backgroundColor = '#FF6347';
+                document.getElementById('resul').style.backgroundColor = '#FF6347';
+
+            } else if (imc >= 40) {
+                document.getElementById('msg').innerHTML = ('OBESIDADE 3');
+                document.getElementById('msg').style.backgroundColor = '#FF0000';
+                document.getElementById('resul').style.backgroundColor = '#FF0000';
+
+            } 
+        }       
+    </script>
+  
+</body>
+</html>
+
+<div id="lista">
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>Lista de compras</h1>
+
+    <ul id="myList">O que precisamos comprar?</ul>
+
+    <p>Click em "adcionar" para adcionar o novo item à lista:</p>
+
+
+
+        <div id="inputs">
+            <input type="radio" name="cores" value="red" checked>Vermelho
+            <input type="radio" name="cores" value="green">Verde
+            <input type="radio" name="cores" value="blue">Azul
+            <br>
+            <input type="text" name="list" id="item">
+            <button onclick="myFunction()" id="adcionar">adicionar</button>
+        </div>
+
+            <script>
+
+                function myFunction() {
+                
+                //Criei um elemento de lista
+                const lista = document.createElement("li");
+                
+                //Atribui à "item" um valor que eu digitei no id "item
+                const item = document.getElementById("item").value;
+
+                //atibuir a "cor" o valor que eu digitei no name "cores"
+                cor = document.querySelector('input[name="cores"]:checked').value;
+
+                //adcionar ao espaço em branco da minha lista, o atributo que eu coloquei na variável "item"
+                lista.innerHTML = item;
+
+                //atribuir cor ao meu item da lista
+                lista.style.color = cor;
+                
+                //adcionar ao id "mylist" dentro da ul o item que atribui a lista
+                document.getElementById("myList").appendChild(lista)
+                
+                //retorna o valor "vazio" à lista
+                document.getElementById("item").value = " ";
+            }
+            </script>
+
+    </div>
+
+</body>
+</html>
