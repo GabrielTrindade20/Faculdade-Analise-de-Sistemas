@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>Cadastro
+        <form action="recibo.php" method="get">
+            <label for="Nome">Nome:</label>
+            <input type="text" name="nometxt" id="nome1">
+<br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senhatxt" id="senha1">
+
+<br><br>
+            <label for="cursos">Curso</label>
+            <select name="cursos" id="cursos">
+                <option value="1">ADS</option>
+                <option value="2">GTI</option>
+                <option value="3">MD</option>
+                <option value="4">CD</option>
+            </select>
+
+            <label for="turno">Turno</label>
+            <input type="radio" name="botao" value="m" id="botao" checked>Matutino
+            <input type="radio" name="botao" value="v" id="botao">Vespertino
+<br><br>
+
+            <label for="linguagens">linguagens que você sabe:</label><br>
+            <input type="checkbox" name="1" id="prog" value="java" >Java
+            <input type="checkbox" name="2" id="prog" value="python" >Python
+            <input type="checkbox" name="3" id="prog" value="php" >PHP
+<br><br>
+            <label for="sobre">Fale mais sobre você:</label><br>
+            <textarea name="texto" id="txt" cols="20" rows="5"></textarea>
+
+<br><br>
+            <input type="submit" value="enviar">
+
+
+        </form>
+    </fieldset>
+</body>
+</html>
