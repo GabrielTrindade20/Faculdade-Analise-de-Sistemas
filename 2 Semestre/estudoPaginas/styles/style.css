@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #F2507B;
+    background-image: url("../imagens/pessoas.png");
+    background-size: cover;
+}
+
+header{
+    background-color: gray;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 15px 10px 15px 10px ;
+}
+
+div#esquerda{
+    width: 30%;
+    float: left;
+    margin: 200px auto;
+    margin-left: 20px;
+    text-align: center;
+    background-color: gray;
+    padding: 30px 50px 30px 20px;
+    border-radius: 5px;
+    
+}
+
+
+input{
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    margin: 10px;
+    outline: none;
+}
+
+input[type=submit]{
+    width: 103%;
+    cursor: pointer;
+}
+
+input:hover[type=submit]{
+    background-color: rgb(157, 27, 184);
+    color: white;
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-left: 300px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+a:hover{
+    background-color: rgb(157, 27, 184);
+    color: white;
+}
+
+
